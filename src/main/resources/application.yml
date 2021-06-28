@@ -1,0 +1,31 @@
+# logging
+logging:
+  level:
+    org.flywaydb: TRACE
+
+spring:
+
+  # H2
+  h2:
+    console:
+      enabled: true
+
+  ## Data Source
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+
+  # JPA
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    generate-ddl: false
+    properties:
+      hibernate:
+        format_sql: true
+
+  # flyway
+  flyway:
+    enabled: true
